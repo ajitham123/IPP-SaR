@@ -1,7 +1,7 @@
 # IPP-SaR
 Informative path planning for search and rescue using drones
 
-More information about the algorithm is available in the following paper. Please cite it if you use it for scientific publication: 
+More information about the algorithm is available in the following papers. Please cite it if you use it for scientific publication: 
 Ajith Anil Meera, Marija Popović, Alex Millane and Roland Siegwart "Obstacle-aware adaptive informative path planning for uav-based target search." **International Conference on Robotics and Automation (ICRA)**. IEEE, 2019.
 
 ```
@@ -16,3 +16,6 @@ Ajith Anil Meera, Marija Popović, Alex Millane and Roland Siegwart "Obstacle-aw
   doi={10.1109/ICRA.2019.8794345}}
 
 ```
+You can also refer the masters thesis for exhaustive details about the algorithm, for both continous and discrete IPP problem: https://repository.tudelft.nl/islandora/object/uuid%3A34ce9384-9352-41bc-99ce-2a54bd1f3361
+
+
