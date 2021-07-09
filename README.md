@@ -16,6 +16,7 @@ Ajith Anil Meera, Marija Popović, Alex Millane and Roland Siegwart "Obstacle-aw
   doi={10.1109/ICRA.2019.8794345}}
 
 ```
-You can also refer the masters thesis for exhaustive details about the algorithm, for both continous and discrete IPP problem: https://repository.tudelft.nl/islandora/object/uuid%3A34ce9384-9352-41bc-99ce-2a54bd1f3361
+
+The algorithm used in this paper can be found in **tmplanner_continuous** package. The algorithm for discrete IPP can be found in **tmplanner_discrete** package. You can also refer the masters thesis for exhaustive details about both continous and discrete IPP algorithm for drones: https://repository.tudelft.nl/islandora/object/uuid%3A34ce9384-9352-41bc-99ce-2a54bd1f3361
 
 
