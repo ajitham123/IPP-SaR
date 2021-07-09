@@ -1,0 +1,19 @@
+"start_pose:
+  header:
+    seq: 0
+    stamp: {secs: 0, nsecs: 0}
+    frame_id: ''
+  pose:
+    position: {x: -10.0, y: 0.0, z: 13.0}
+    orientation: {x: 0.0, y: 0.0, z: 0.0, w: 0.0}
+start_velocity: {x: 0.0, y: 0.0, z: 0.0}
+goal_pose:
+  header:
+    seq: 0
+    stamp: {secs: 0, nsecs: 0}
+    frame_id: ''
+  pose:
+    position: {x: -10.0, y: 0.0, z: 13.0}
+    orientation: {x: 0.0, y: 0.0, z: 0.0, w: 0.0}
+goal_velocity: {x: 0.0, y: 0.0, z: 0.0}
+bounding_box: {x: 0.0, y: 0.0, z: 0.0}"

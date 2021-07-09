@@ -1,0 +1,287 @@
+<?xml version="1.0" ?>
+<sdf version="1.4">
+  <world name="default">
+
+    <!-- Plug-in to get sensor data for UAV -->
+    <plugin name="ros_interface_plugin" filename="librotors_gazebo_ros_interface_plugin.so"></plugin>
+
+    <physics type="ode">
+      <gravity>0 0 -9.81</gravity>
+      <ode>
+        <solver>
+          <type>quick</type>
+          <!-- <iters>30</iters> -->
+	  <iters>30</iters>
+        </solver>
+        <constraints>
+          <cfm>0.0</cfm>
+          <erp>0.2</erp>
+          <contact_max_correcting_vel>100.0</contact_max_correcting_vel>
+          <contact_surface_layer>0.001</contact_surface_layer>
+        </constraints>
+      </ode>
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1</real_time_factor>
+      <real_time_update_rate>1000</real_time_update_rate>
+    </physics>
+
+    <!-- Ground Plane -->
+<!--
+    <model name='soil_ground_plane'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>30 30</size>
+            </plane>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>100</mu>
+                <mu2>50</mu2>
+              </ode>
+            </friction>
+            <bounce/>
+            <contact>
+              <ode/>
+            </contact>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>30 30</size>
+            </plane>
+          </geometry>
+          <material>
+	    Gazebo/White
+          </material>
+        </visual>
+        <velocity_decay>
+          <linear>0</linear>
+          <angular>0</angular>
+        </velocity_decay>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <pose>0.0 0.0 0 0 -0 0</pose>
+    </model>
+
+    <include>
+      <pose>6.35 0 0 0 0 0</pose>
+      <uri>model://april_tag0</uri>
+    </include>
+    <include>
+      <pose>0 6.35 0 0 0 0</pose>
+      <uri>model://april_tag1</uri>
+    </include>
+    <include>
+      <pose>-6.35 0 0 0 0 0</pose>
+      <uri>model://april_tag2</uri>
+    </include>
+    <include>
+      <pose>0 -6.35 0 0 0 0</pose>
+      <uri>model://april_tag3</uri>
+    </include>
+
+
+    <light type="directional" name="my_light">
+      <pose>-100 100 30 0 0 0</pose>
+      <diffuse>.9 .9 .9 1</diffuse>
+      <specular>.1 .1 .1 1</specular>
+      <attenuation>
+        <range>20</range>
+      </attenuation>
+      <direction>0 0 -1</direction>
+      <cast_shadows>false</cast_shadows>
+    </light>
+-->
+
+    <include>
+      <uri>model://sun</uri>
+    </include>
+
+    <include>
+      <uri>model://env_plane</uri>
+    </include>
+
+    <include>
+      <uri>model://box</uri>
+      <name>box_1</name>
+      <pose>0 0 13 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model://person_standing</uri>
+      <name>person_1</name>
+      <pose> 8 -12 0 -1.57 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model://person_standing</uri>
+      <name>person_3</name>
+      <pose>-6 -7 0 -1.57 0 0</pose>
+    </include>
+
+
+    <include>
+      <uri>model://person_standing</uri>
+      <name>person_4</name>
+      <pose>12 -7 0 -1.57 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model://person_standing</uri>
+      <name>person_5</name>
+      <pose>-7 -12 0 -1.57 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model://person_standing</uri>
+      <name>person_6</name>
+      <pose>4 -11 0 -1.57 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model://person_standing</uri>
+      <name>person_7</name>
+      <pose>-12 -6 0 -1.57 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model://person_standing</uri>
+      <name>person_8</name>
+      <pose>0 -7 0 -1.57 0 0</pose>
+    </include>
+
+
+<!-- Real life scene!-->
+<!--
+    <include>
+      <uri>model://apartment</uri>
+      <name>apartment1</name>
+      <pose>0 0 0 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model://house_3</uri>
+      <name>houses_2</name>
+      <pose>10 8 0 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model://oak_tree</uri>
+      <name>oak_tree1</name>
+      <pose>-1 10 0 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model://oak_tree</uri>
+      <name>oak_tree2</name>
+      <pose>-9 -9 0 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model://pickup</uri>
+      <name>ambulance1</name>
+      <pose>-10 0 0 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model://reactor</uri>
+      <name>reactor1</name>
+      <pose>-10 10 0 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model://house_3</uri>
+      <name>houses_3</name>
+      <pose>10 -8 0 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model://person_standing</uri>
+      <name>person_9</name>
+      <pose>10 1 0 -1.57 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model://person_standing</uri>
+      <name>person_10</name>
+      <pose>8 3 0 -1.57 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model://person_walking</uri>
+      <name>office_building</name>
+      <pose>3 10 0 0 0 0</pose>
+    </include>
+
+-->
+
+<!-- Real life scene!-->
+
+<!-- Scattered Humans-->
+<!--
+    <include>
+      <uri>model://person_standing</uri>
+      <name>person_1</name>
+      <pose> 8 12 0 -1.57 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model://person_standing</uri>
+      <name>person_3</name>
+      <pose>-6 -10 0 -1.57 0 0</pose>
+    </include>
+
+
+    <include>
+      <uri>model://person_standing</uri>
+      <name>person_4</name>
+      <pose>12 0 0 -1.57 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model://person_standing</uri>
+      <name>person_5</name>
+      <pose>-7 12 0 -1.57 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model://person_standing</uri>
+      <name>person_6</name>
+      <pose>4 -11 0 -1.57 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model://person_standing</uri>
+      <name>person_7</name>
+      <pose>-12 -6 0 -1.57 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model://person_standing</uri>
+      <name>person_8</name>
+      <pose>0 7 0 -1.57 0 0</pose>
+    </include>
+-->
+<!-- Scattered Humans-->
+
+
+    <gui>
+      <camera name="user_camera">
+        <pose>50 -50 45 0 0.4 2.4</pose>
+      </camera>
+    </gui>
+
+</world>
+</sdf>
+

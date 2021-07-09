@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+<sdf version="1.5">
+  <model name="cylinder">
+    <link name="cylinder_link">
+      <pose>0 0 0 0 0 0</pose>
+
+      <visual name="visual">
+        <geometry>
+          <cylinder>
+            <radius>3</radius>
+            <length>25</length>
+          </cylinder>
+        </geometry>
+
+      </visual>
+
+      <collision name="collision">
+        <geometry>
+          <cylinder>
+            <radius>3</radius>
+            <length>25</length>
+          </cylinder>
+        </geometry>
+
+      </collision>
+
+    </link>
+  </model>
+</sdf>
